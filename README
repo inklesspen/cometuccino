@@ -1,0 +1,19 @@
+Comet demonstration for Cappuccino (http://cappuccino.org/)
+By Jon Rosebaugh
+
+This uses a Cappuccino-based re-implementation of the Javascript HTTP server from http://www.reversehttp.net/
+
+Steps to use:
+0) Install Erlang (I prefer to use Macports for this.)
+1) Check out this project in an appropriate directory.
+2) Check out the reversehttp code (currently http://github.com/tonyg/reversehttp/tree/master) in a convenient location
+3) cd to the reversehttp source tree, run make.
+4) Edit ebin/reversehttp.app if you want the erlang server to run on something other than localhost port 8000. You're interested in lines 13 through 17 (at least as of May 7, 2009).
+5) Remove or rename the priv/www directory, and create a symlink from the Cometuccino project folder to replace it, such that priv/www/index.html is the index.html of the Cometuccino project
+6) Run ./start.sh (You can terminate this server by hitting Ctrl-g, then typing q at the prompt.)
+7) Make sure foo.localhost resolves to your local machine (and, particularly, to whichever interface you're running the Erlang server on). If you've changed the server to run on some other domain than localhost, then instead you need foo.<yourchosendomain>
+8) Visit http://localhost:8000 (or whatever address/port you've configured it to run on). The text will invite you to visit foo.localhost:8000. If you've changed the domain or port, the correct value SHOULD appear instead.
+9) Visit the appropriate 'foo' domain/port combo. You should receive a text/plain response containing "Hello World, served from within your Cappuccino app".
+10) Experiment with custom logic for your HTTP requests. The code should be pretty straightforward.
+
+If you have any problems that can't be resolved by quick sanity checks, please let me know.
