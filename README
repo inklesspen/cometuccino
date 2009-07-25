@@ -3,6 +3,9 @@ By Jon Rosebaugh
 
 This uses a Cappuccino-based re-implementation of the Javascript HTTP server from http://www.reversehttp.net/
 
+Note:
+The reversehttp project has evolved quite a lot since I write Cometuccino. If you run git checkout fb3b6eed20e481556ba83bc5db6a08d0f9c62266 in the reversehttp project dir (and then run make again), you will go back to the revision I wrote it against. Patches to bring it up to date with reversehttp would be welcome. (I'm working on a slightly different approach, which I shall opensource when ready.)
+
 Steps to use:
 0) Install Erlang (I prefer to use Macports for this.)
 1) Check out this project in an appropriate directory.
